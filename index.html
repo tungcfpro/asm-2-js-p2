@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./sv-cart/css/style.css">
+</head>
+
+<body>
+    <div class="giohang">
+        <a onclick="showcart()"><img src="./sv-cart/images/cart.png"><span id="countsp">0</span></a>
+    </div>
+    <div id="showcart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+                <th>Xóa</th>
+            </tr>
+            
+            
+            <tbody id="mycart">
+
+            </tbody>
+
+        </table>
+        <button> <a class="ttoa" href="./sv-cart/cart.html">Thanh toán</a></button>
+        <button onclick="xoaall()">Xóa tất cả</button>
+       
+    </div>
+    <div class="boxcenter">
+       
+
+        <div class="row m menu">
+            <img src="./Image/logo/reallogo.png" alt="">
+            <ul>
+                <li><a href="./index.html">Trang chủ</a></li>
+                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+            </ul>
+        </div>
+        <div class="row mb "> 
+            <div class="row">
+                <div class="banner mb">
+                   <img id="img" onclick="changeImage()" src="../Image/banncer.png" alt="">
+                   <script>
+                       var index = 1;
+                       changeImage = function(){
+                           var imgs = ["../Image/bannner/New folder/0.png","../Image/bannner/New folder/1.png","../Image/bannner/New folder/2.png","../Image/bannner/New folder/3.png"];
+                           document.getElementById('img').src = imgs[index];
+                           index++;
+                           if(index == 3){
+                               index = 0;
+                           }
+
+                       }
+                       setInterval(changeImage,2000);
+                   </script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="boxsp mr">
+                    <div class="row img"><img src="../Image/click.jpg" alt=""></div>
+                    <p>$<span>1000</span></p>
+                    <a href="../show/click/show1.html">Honda Click 125 2016</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="../Image/dylan.jpg" alt=""></div>
+                    <p>$<span>2000</span></p>
+                    <a href="../show/dylan/show1.html">Honda Dylan 150 65+6</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="../Image/ex 132 blue.jpg" alt=""></div>
+                    <p>$<span>3000</span></p>
+                    <a href="../show/ex 135/show1.html">Yamaha Exciter 135 62zz</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="../Image/ex 155.jpg" alt=""></div>
+                    <p>$<span>4000</span></p>
+                    <a href="../show/ex 155/show1.html">Yamaha Exciter 155 VVA ECU Redleo</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="../Image/future 1255.jpg" alt=""></div>
+                    <p>$<span>5000</span></p>
+                    <a href="../show/fuled/show1.html">Honda Future 125 mod body</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="../Image/monkey 125.jpg" alt=""></div>
+                    <p>$<span>6000</span></p>
+                    <a href="../show/monkey/show1.html">Honda Monkey 125fi 2018</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="../Image/SH 150 2009.jpg" alt=""></div>
+                    <p>$<span>7000</span></p>
+                    <a href="../show/sh/show1.html">Honda SH 150i 2017 68+2</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="../Image/siriuss.jpg" alt=""></div>
+                    <p>$<span>8000</span></p>
+                    <a href="../show/si/show1.html">Yamaha Sirius 110 mod body</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="../Image/vespa sprint.jpg" alt=""></div>
+                    <p>$<span>9000</span></p>
+                    <a href="../show/vespa/show1.html">Piaggo vespa Sprint 150 2021</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+        <div class="csss">
+            <hr>
+            <img class="cs" src="../Image/logo/188850713_147771420678719_8761612120846466434_n.png" alt="">
+            <hr>
+       <a href="#">Giới thiệu về chúng tôi</a> <br>
+       <a href="#">Trang chủ</a> <br>
+       <a href="#">Kênh bán qua Chợ Tốt</a> <br>
+       <a href="#">Fanpage</a> <br>
+       
+        </div>
+    </div>
+    <script src="./sv-cart/js/cart.js"></script>
+    <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="60" data-width="200" data-height="100"></div>
+
+
+<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+
+</body>
+
+</html>
